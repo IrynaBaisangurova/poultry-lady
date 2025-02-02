@@ -532,222 +532,139 @@ header label {
   justify-content: center;
   align-items: center;
 }
-.title-box {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  text-align: center;
-  margin-bottom: 36px;
-}
-.title-module,
-.subtitle-prom {
-  font-weight: 700;
-  font-size: 26px;
-  /* text-align: center; */
-  color: var(--dark);
-  margin-bottom: 8px;
-}
-.subtitle-box {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 38px;
-  align-items: center;
-}
 .subtitle-module {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 17px;
-  text-transform: uppercase;
-  color: var(--dark);
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: none;
+    margin-bottom: 8px;
+    /* padding-left: 60px; */
 }
-.text-prom {
-  font-size: 14px;
-  text-align: start;
+.title-module {
+  font-size: 24px;
+  margin-bottom: 16px;
 }
-.one {
-  text-align: center;
-}
-.block-prom {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  align-items: flex-start;
-  margin-bottom: 14px;
-}
-.two {
-  margin-bottom: 34px;
-}
-.image-module {
-  margin-bottom: 4px;
-}
-.module-list {
-  display: flex;
-  flex-direction: column;
-  gap: 46px;
-  align-items: center;
-  justify-content: center;
-}
-.module-items {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  align-items: start;
-}
-.subtitle-text {
-  text-align: start;
-  margin-bottom: 26px;
-  font-size: 22px;
-}
-
-.text-module {
-  text-align: start;
-  margin-bottom: 4px;
-  font-size: 18px;
-}
-.image-module {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.box-module {
-  margin-bottom: 50px;
-}
-.buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.module-span {
-  font-size: 28px;
-  margin-left: 12px;
-}
-.module-span-two {
-  font-size: 28px;
-  margin-right: 12px;
-}
-.btn-mod {
-  width: 280px;
-  margin: 0 auto;
-  margin-bottom: 34px;
-  background-color: var(--green);
-}
-.btn-mod:hover,
-.btn-mod:focus {
-  box-shadow: 0 38px 86px 0 #000, 0 3px 71px 0 rgba(1, 203, 203, 0.45);
-  background: #aae0e0;
-  color: var(--dark);
-  border: var(--dark);
-}
-.button-mod {
-  display: flex;
-  gap: 34px;
-}
-.about-arrow {
-  font-size: 20px;
-  color: #000;
-}
-
-/* #endregion module */
-
-/* new module */
-/* #prog {
-  padding-bottom: 64px;
-} */
-
-.mod-section {
-  overflow: hidden;
-}
-
-.mod-header {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.02em;
-  color: var(--bg);
+.block-text {
   margin-bottom: 32px;
 }
-
-.mod-item {
-  position: relative;
-  padding: 20px 0;
+.module-wrapper {
+  margin-bottom: 32px;
 }
+/* #region accordion */
 
-.mod-item::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: rgba(47, 73, 96, 0.4);
+.accordion {
+  padding-top: 14px;
 }
-
-.mod-item::before {
-  top: 0;
-}
-
-.mod-item::after {
-  bottom: 0;
-}
-
-.mod-button {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  text-align: left;
-  padding: 0;
-  background-color: inherit;
-  border: none;
-}
-
-.mod-button span {
+.subtitle-accordion {
   font-size: 20px;
-  font-weight: 500;
-  line-height: 30px;
-  letter-spacing: -0.02em;
+  color: var(--dark);
+  text-transform: capitalize;
+  font-weight: 300;
+  text-align: center;
+}
+.accordion .accordion-item {
+  border-bottom: 1px solid var(--bg-acc);
+ 
+}
+.accordion .accordion-item button[aria-expanded=true] {
+  border-bottom: 1px solid #03b5d2;
+}
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1.5em 0;
+  color: #7288a2;
+  font-size: 16px;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+.accordion button:hover, .accordion button:focus {
+  cursor: pointer;
   color: var(--dark);
 }
-
-.mod-button svg {
-  stroke: rgba(47, 73, 96, 0.4);
-  transform: rotate(180deg);
+.accordion button:hover::after, .accordion button:focus::after {
+  cursor: pointer;
+  color: #03b5d2;
+  border: 1px solid #03b5d2;
+ 
 }
 
-.mod-button.active svg {
-  transform: rotate(360deg);
+.accordion button .accordion-title {
+  padding: 0;
+  color: #000;
+  font-size: 14px;
 }
-
-.mod-list-icon {
-  width: 34px;
-  height: 34px;
-  padding: 7px;
-  border: 1px solid rgba(47, 73, 96, 0.4);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  /* border: 1px solid; */
+  border-radius: 22px;
 }
-
-.mod-answer {
-  margin-top: 16px;
-  line-height: 24px;
-  letter-spacing: -0.02em;
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 6px;
+  left: 4px;
+  width: 20px;
+  height: 1px; 
+  background: var(--dark);
+}
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: -3px;
+  left: 14px;
+  width: 1px;
+  height: 20px;
+  background: var(--dark); 
+}
+.accordion button[aria-expanded=true] {
   color: var(--dark);
+  background-color: var(--navy-blue);
+   
+}
+.accordion button[aria-expanded=true] .icon::after {
+  width: 0;
+}
+.accordion button[aria-expanded=true] + .accordion-content {
+  opacity: 1;
+  max-height: 214px;
+  transition: all 200ms linear;
+  will-change: opacity, max-height; 
+ }
+.accordion .accordion-content {
+  opacity: 0;
   max-height: 0;
   overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.5s ease, opacity 0.5s ease;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+  padding-left: 10px;
+  background-color: var(--blue-light);
+ }
+
+.accordion .accordion-content p {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0;
+ }
+ .buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  /* margin-top: 40px; */
 }
-.text-answer {
-  text-align: left;
-  margin-bottom: 6px;
-}
+ /* #endregion accordion */
 
 /* course */
 
@@ -1078,6 +995,7 @@ footer .logo .logo-link {
   #mod {
     padding-bottom: 96px;
   }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -1206,64 +1124,8 @@ footer .logo .logo-link {
     align-items: center;
     padding: 0 40px;
   }
-  .subtitle-prog {
-    font-size: 18px;
-    margin-bottom: 36px;
-  }
-  .text-prom.one {
-    font-size: 18px;
-    font-weight: 500;
-  }
-  .block-prom {
-    display: flex;
-    flex-direction: column;
-    width: 45%;
-    gap: 24px;
-  }
   .block-text {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 46px;
-  }
-
-  .image-module {
-    display: flex;
-    flex-direction: column;
-    gap: 26px;
-  }
-  .module-items {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: space-between;
-    width: calc((100% - 12px) / 2);
-  }
-  .module-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: space-between;
-    align-items: start;
-  }
-
-  .subtitle-module {
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 18px;
-  }
-  .text-block.add {
-    margin-top: 50px;
-  }
-  .buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    /* margin-top: 40px; */
+    text-align: start;
   }
 
   /* #endregion module */
@@ -1546,7 +1408,7 @@ footer .logo .logo-link {
     width: 50%;
     margin-bottom: 60px;
   }
-  .block-next {
+  .block-text {
     padding-left: 60px;
   }
   /* .module-wrapper .mod-list {
@@ -1687,263 +1549,45 @@ footer .logo .logo-link {
   .section-module {
     min-height: 1000px;
   }
-  /* .accordion {
-    max-width: 600px;
-    margin: 0 auto;
-    border: 1px solid cornflowerblue;
-  } */
-
-  .accordion__heading {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    padding: 10px 15px;
-    margin: 0;
-    background: cornflowerblue;
-    color: white;
-  }
-
-  .accordion__heading:after,
-  .accordion__heading:before {
-    content: "";
-    position: absolute;
-    width: 12px;
-    height: 3px;
-    top: 50%;
-    right: 20px;
-    background: white;
-    transition: all 0.1s;
-  }
-
-  .accordion__checkbox:checked ~ .accordion__heading:before {
-    transform: rotate(90deg);
-    opacity: 0;
-    transition: all 0.1s;
-  }
-
-  .accordion__heading:after {
-    transform: rotate(90deg);
-    transition: all 0.1s;
-  }
-
-  .accordion__checkbox:checked ~ .accordion__heading:after {
-    transform: rotate(180deg);
-  }
-
-  .accordion__checkbox {
-    display: none;
-    position: absolute;
-    left: -9999em;
-  }
-
-  .accordion__checkbox:checked ~ .accordion__content {
-    max-height: 1000px;
-    transition: all 2s;
-  }
-
-  .accordion__content {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 15px;
-    transition: all 0.5s;
-  }
-
-
-.accordion__item {
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-
-.accordion__btn {
-  padding: 20px;
-  border: 1px solid #000;
-}
-
-.accordion__content {
-  overflow: hidden;
-  padding: 0 20px;
-  border: 1px solid #000;
-  border-top: none;
-  max-height: 0;
-  transition: all 0.5s;
-}
-
-.active .accordion__content {
-  max-height: 1000px;
-  transition: all 2s;
-}
-
 
   .module-container {
     display: flex;
     gap: 84px;
   }
-  .mod-list {
-    display: flex;
-    /* flex-wrap: wrap; */
-    flex-direction: column;
-    position: relative;
-    margin-bottom: 50px;
-    margin-top: 50px;
-    background-color: var(--lightgrey);
-    padding: 32px;
-  }
-  .mod-text {
-    color: var(--dark);
-    font-size: 44px;
-  }
-  .mod-item {
-    width: 100%;
-    position: relative;
-    box-sizing: border-box;
-    /* padding-top: 12px;
-      padding-bottom: 12px;
-      padding-left: 22px;
-      padding-right: 22px; */
-  }
-
-  /* .mod-item:nth-child(even) {
-      padding-left: 32px;
-  }
-
-  .mod-item:nth-child(odd) {
-      padding-right: 32px;
-  } */
-
-  /* .mod-list::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      width: 1px;
-      background: var(--dark);
-  } */
-
-  .mod-list-icon {
+  .accordion button .icon {
+    display: inline-block;
+    position: absolute;
+    top: 28px;
+    right: 20px;
     width: 30px;
     height: 30px;
+    /* border: 1px solid; */
+    border-radius: 22px;
   }
-
-  .mod-answer {
-    margin-top: 16px;
-    margin-right: 32px;
-    text-align: left;
+  .accordion button .icon::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 14px;
+    left: -5px;
+    width: 30px;
+    height: 1px;
+    background: var(--dark);
   }
+  .accordion button .icon::after {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 9px;
+    width: 1px;
+    height: 30px;
+    background: var(--dark); 
+  }
+ 
   .main-btn {
     width: 220px;
   }
-  #mod {
-    padding-bottom: 164px;
-  }
-/* accordeon */
-
-.accordion {
-  padding-top: 24px;
-}
-.subtitle-accordion {
-  font-size: 22px;
-  color: var(--dark);
-  text-transform: capitalize;
-  font-weight: 300;
-  text-align: center;
-}
-.accordion .accordion-item {
-  border-bottom: 1px solid var(--bg-acc);
- 
-}
-.accordion .accordion-item button[aria-expanded=true] {
-  border-bottom: 1px solid #03b5d2;
-}
-.accordion button {
-  position: relative;
-  display: block;
-  text-align: left;
-  width: 100%;
-  padding: 1.5em 0;
-  color: #7288a2;
-  font-size: 1.15rem;
-  font-weight: 400;
-  border: none;
-  background: none;
-  outline: none;
-}
-.accordion button:hover, .accordion button:focus {
-  cursor: pointer;
-  color: var(--dark);
-}
-.accordion button:hover::after, .accordion button:focus::after {
-  cursor: pointer;
-  color: #03b5d2;
-  border: 1px solid #03b5d2;
- 
-}
-
-.accordion button .accordion-title {
-  padding: 1em 1.5em;
-  color: #000;
-}
-.accordion button .icon {
-  display: inline-block;
-  position: absolute;
-  top: 28px;
-  right: 20px;
-  width: 30px;
-  height: 30px;
-  /* border: 1px solid; */
-  border-radius: 22px;
-}
-.accordion button .icon::before {
-  display: block;
-  position: absolute;
-  content: "";
-  top: 14px;
-  left: -5px;
-  width: 30px;
-  height: 1px;
-  background: var(--dark);
-}
-.accordion button .icon::after {
-  display: block;
-  position: absolute;
-  content: "";
-  top: 0px;
-  left: 9px;
-  width: 1px;
-  height: 30px;
-  background: var(--dark);
- 
-}
-.accordion button[aria-expanded=true] {
-  color: var(--dark);
-  background-color: var(--navy-blue);
-   
-}
-.accordion button[aria-expanded=true] .icon::after {
-  width: 0;
-}
-.accordion button[aria-expanded=true] + .accordion-content {
-  opacity: 1;
-  max-height: 204px;
-  transition: all 200ms linear;
-  will-change: opacity, max-height;
-  
-}
-.accordion .accordion-content {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 200ms linear, max-height 200ms linear;
-  will-change: opacity, max-height;
-  padding-left: 20px;
-  background-color: var(--blue-light);
-}
-
-.accordion .accordion-content p {
-  font-size: 1rem;
-  font-weight: 300;
-  margin: 12px 0;
-}
 }
 @keyframes fadeIn {
   from {
@@ -1954,4 +1598,5 @@ footer .logo .logo-link {
     opacity: 1;
     transform: translateY(0);
   }
+ 
 }
