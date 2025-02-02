@@ -543,7 +543,7 @@ header label {
 .subtitle-prom {
   font-weight: 700;
   font-size: 26px;
-  text-align: center;
+  /* text-align: center; */
   color: var(--dark);
   margin-bottom: 8px;
 }
@@ -1250,9 +1250,9 @@ footer .logo .logo-link {
   }
 
   .subtitle-module {
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 20px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
   }
   .text-block.add {
     margin-top: 50px;
@@ -1263,7 +1263,7 @@ footer .logo .logo-link {
     justify-content: center;
     align-items: center;
     gap: 16px;
-    margin-top: 40px;
+    /* margin-top: 40px; */
   }
 
   /* #endregion module */
@@ -1544,6 +1544,10 @@ footer .logo .logo-link {
   }
   .module-wrapper {
     width: 50%;
+    margin-bottom: 60px;
+  }
+  .block-next {
+    padding-left: 60px;
   }
   /* .module-wrapper .mod-list {
     margin-top: 0;
@@ -1552,27 +1556,28 @@ footer .logo .logo-link {
   .module-wrapper .buttons {
     margin-top: auto;
   }
-  /* .subtitle-module {
+  .subtitle-module {
     font-size: 14px;
     font-weight: 300;
     text-transform: none;
     margin-bottom: 14px;
-  } */
+    padding-left: 60px;
+  }
   .title-module {
-    text-align: start;
     font-size: 36px;
     margin-bottom: 24px;
+    padding-left: 60px;
   }
   .module-text {
     margin-bottom: 12px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
   }
   .module-text-one {
     margin-left: 0;
   }
   .module-text-two {
     margin-bottom: 46px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
   }
 
   /* old */
@@ -1837,7 +1842,7 @@ footer .logo .logo-link {
   padding-top: 24px;
 }
 .subtitle-accordion {
-  font-size: 24px;
+  font-size: 22px;
   color: var(--dark);
   text-transform: capitalize;
   font-weight: 300;
@@ -1883,30 +1888,30 @@ footer .logo .logo-link {
   position: absolute;
   top: 28px;
   right: 20px;
-  width: 22px;
-  height: 22px;
-  border: 1px solid;
+  width: 30px;
+  height: 30px;
+  /* border: 1px solid; */
   border-radius: 22px;
 }
 .accordion button .icon::before {
   display: block;
   position: absolute;
   content: "";
-  top: 9px;
-  left: 5px;
-  width: 10px;
-  height: 2px;
-  background: currentColor;
+  top: 14px;
+  left: -5px;
+  width: 30px;
+  height: 1px;
+  background: var(--dark);
 }
 .accordion button .icon::after {
   display: block;
   position: absolute;
   content: "";
-  top: 5px;
+  top: 0px;
   left: 9px;
-  width: 2px;
-  height: 10px;
-  background: currentColor;
+  width: 1px;
+  height: 30px;
+  background: var(--dark);
  
 }
 .accordion button[aria-expanded=true] {
