@@ -566,7 +566,7 @@ header label {
  
 }
 .accordion .accordion-item button[aria-expanded=true] {
-  border-bottom: 1px solid #03b5d2;
+  border-bottom: 1px solid var(--bg-acc);
 }
 .accordion button {
   position: relative;
@@ -587,8 +587,8 @@ header label {
 }
 .accordion button:hover::after, .accordion button:focus::after {
   cursor: pointer;
-  color: #03b5d2;
-  border: 1px solid #03b5d2;
+  color: var(--bg-acc);
+  border: 1px solid var(--bg-acc);
  
 }
 
@@ -1126,8 +1126,49 @@ footer .logo .logo-link {
   }
   .block-text {
     text-align: start;
+    margin-bottom: 34px;
   }
-
+  .module-wrapper {
+    margin-bottom: 46px;
+  }
+  .subtitle-module {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 10px;
+  }
+  .title-module {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 24px;
+  }
+  .module-text,
+  .module-text-one,
+  .module-text-two {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+  .accordion .accordion-content {
+    padding-left: 20px;
+   }
+   .accordion .accordion-content p {
+    font-size: 16px;
+    margin: 14px;
+   }
+   .accordion button .accordion-title {
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+   }
+   .accordion button .icon {
+    right: 40px;
+   }
+   .subtitle-accordion {
+    font-size: 32px;
+   }
+   .buttons {
+    margin-top: 46px;
+    flex-direction: row;
+   }
   /* #endregion module */
 
   .courses-subtitle {
@@ -1587,6 +1628,9 @@ footer .logo .logo-link {
  
   .main-btn {
     width: 220px;
+  }
+  .buttons {
+    flex-direction: row;
   }
 }
 @keyframes fadeIn {
