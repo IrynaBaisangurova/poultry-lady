@@ -1,3 +1,5 @@
+
+
 body {
   font-family: "Montserrat", sans-serif;
   line-height: 24px;
@@ -72,6 +74,25 @@ button {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.container {
+  max-width: 375px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding: 0 32px;
+  }
 }
 
 /* #region heder-menu */
@@ -321,7 +342,8 @@ header label {
   background-color: var(--lightgrey);
 }
 .icons {
-  fill: var(--lightgrey);
+  /* fill: var(--lightgrey); */
+  fill: var(--dark);
 }
 .icons-link:hover,
 .icons-link:focus {
@@ -482,11 +504,11 @@ header label {
   justify-content: center;
 }
 .title-buy {
-  font-size: 42px;
-  line-height: 54px;
+  font-size: 32px;
+  line-height: 44px;
   text-transform: capitalize;
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 .sale {
   font-size: 32px;
@@ -499,11 +521,12 @@ header label {
   text-decoration-line: underline;
 }
 .buy {
-  margin-bottom: 66px;
+  margin-bottom: 36px;
 }
 .text-action {
   font-weight: 600;
   font-size: 24px;
+  line-height: 44px;
   text-decoration-line: underline;
 }
 .action-list {
@@ -515,6 +538,11 @@ header label {
   display: flex;
   flex-direction: column;
   gap: 22px;
+}
+.image-action {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--navy-blue);
 }
 
 /* #endregion action */
@@ -939,7 +967,7 @@ footer .logo .logo-link {
   transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icons {
-  fill: var(--lightgrey);
+  fill: var(--dark);
 }
 .items-link:hover,
 .items-link:focus {
@@ -1309,8 +1337,8 @@ footer .logo .logo-link {
 
 @media (min-width: 1146px) {
   .section {
-    padding-top: 156px;
-    padding-bottom: 110px;
+    padding-top: 96px 0;
+   
   }
   .container-main {
     max-width: 1146px;
@@ -1349,9 +1377,9 @@ footer .logo .logo-link {
     font-size: 16px;
   }
 
-  .section {
-    padding: 100px 0;
-  }
+  /* .section {
+    padding: 60px 0;
+  } */
   .container {
     max-width: 1158px;
     padding-left: 15px;
@@ -1479,7 +1507,7 @@ footer .logo .logo-link {
     margin-left: 0;
   }
   .module-text-two {
-    margin-bottom: 46px;
+    margin-bottom: 56px;
     /* margin-left: 20px; */
   }
 
@@ -1513,8 +1541,8 @@ footer .logo .logo-link {
     display: initial;
   }
   .slider-wrapper {
-    max-width: 1200px;
-    margin: 0 10px 45px;
+    max-width: 1400px;
+    /* margin: 0 10px 45px; */
   }
   /* reviews */
 
@@ -1593,15 +1621,22 @@ footer .logo .logo-link {
 
   .module-container {
     display: flex;
-    gap: 84px;
+    gap: 62px;
+  }
+  .subtitle-accordion {
+    padding-top: 52px;
+  }
+  .accordion button .accordion-title {
+    font-size: 16px;
+    padding: 12px 8px;
   }
   .accordion button .icon {
     display: inline-block;
     position: absolute;
     top: 28px;
     right: 20px;
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     /* border: 1px solid; */
     border-radius: 22px;
   }
@@ -1611,7 +1646,7 @@ footer .logo .logo-link {
     content: "";
     top: 14px;
     left: -5px;
-    width: 30px;
+    width: 24px;
     height: 1px;
     background: var(--dark);
   }
@@ -1622,7 +1657,7 @@ footer .logo .logo-link {
     top: 0px;
     left: 9px;
     width: 1px;
-    height: 30px;
+    height: 24px;
     background: var(--dark); 
   }
  
