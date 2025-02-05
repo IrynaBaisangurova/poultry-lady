@@ -32,11 +32,11 @@
   margin: 0;
   transition: transform 0.3s ease;
 }
-.user-link {
+/* .user-link {
   position: absolute;
   left: 32px;
   top: 400px;
-}
+} */
 .swiper-slide {
   flex-shrink: 0;
   min-height: 450px;
